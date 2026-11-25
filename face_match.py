@@ -7,7 +7,7 @@ and cosine distance. Saves an annotated copy of the group photo with a
 green box on any match and a red box on everyone else.
 
 Usage:
-    python face_match.py --individual images/individual.png --group images/group.png
+    python face_match.py --individual individual.png --group group.png
 """
 
 import argparse
@@ -46,9 +46,9 @@ def embed_faces(image):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--individual", default="images/individual.png")
-    parser.add_argument("--group", default="images/group.png")
-    parser.add_argument("--output", default="output/annotated.png")
+    parser.add_argument("--individual", default="individual.png")
+    parser.add_argument("--group", default="group.png")
+    parser.add_argument("--output", default="annotated.png")
     parser.add_argument("--threshold", type=float, default=DEFAULT_THRESHOLD)
     parser.add_argument("--show", action="store_true", help="open a preview window")
     args = parser.parse_args()

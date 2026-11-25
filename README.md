@@ -4,7 +4,7 @@ Given a photo of one person and a group photo, this program finds every face in 
 
 | Person is in the group | Person is not in the group |
 |---|---|
-| ![match](output/in_group.png) | ![no match](output/not_in_group.png) |
+| ![match](in_group.png) | ![no match](not_in_group.png) |
 
 ## How it works
 
@@ -34,8 +34,8 @@ The first version of this project, written for a graduate course, gave wrong ans
 
 ```bash
 pip install -r requirements.txt
-python face_match.py --individual images/individual.png --group images/group.png
-python face_match.py --individual images/person_from_group.png   # a true match
+python face_match.py --individual individual.png --group group.png
+python face_match.py --individual person_from_group.png   # a true match
 ```
 
 Add `--show` to open a preview window. Model weights download automatically on the first run.
